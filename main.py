@@ -7,7 +7,10 @@ import os
 import time
 
 load_dotenv()
+
 EMAIL_KEY = os.getenv("EMAILKEY")
+if EMAIL_KEY == None:
+    EMAIL_KEY = os.environ["EMAILKEY"]
 
 app = Flask(__name__)
 blog_json = requests.get("https://api.npoint.io/c790b4d5cab58020d391").json()
