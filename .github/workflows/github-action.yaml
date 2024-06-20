@@ -1,7 +1,15 @@
 name: Run Tests
 
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - created
+      
 env:
-  EMAILKEY: ${{ secrets.EMAILKEY }}
+  EMAILKEY: ${{secrets.EMAILKEY}}
 
 jobs:
   test:
