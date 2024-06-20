@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "EMAILKEY=$EMAILKEY" >> .env
         env:
-          MAP_API_KEY: ${{secrets.EMAILKEY}}
+          EMAILKEY: ${{secrets.EMAILKEY}}
 
       - name: Install dependencies
         run: |

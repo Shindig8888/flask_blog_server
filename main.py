@@ -9,6 +9,7 @@ import time
 load_dotenv()
 
 EMAIL_KEY = os.getenv("EMAILKEY")
+
 if EMAIL_KEY == None:
     EMAIL_KEY = os.environ["EMAILKEY"]
 
