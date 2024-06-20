@@ -8,9 +8,6 @@ on:
     types:
       - created
 
-env:
-  EMAILKEY: ${{secrets.EMAILKEY}}
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,9 +23,9 @@ jobs:
 
       - name: access to secrets
         run: |
-          echo "MAP_API_KEY=$MAP_API_KEY" >> .env
+          echo "EMAILKEY=$EMAILKEY" >> .env
         env:
-          MAP_API_KEY: ${{secrets.MAP_API_KEY}}
+          MAP_API_KEY: ${{secrets.EMAILKEY}}
 
       - name: Install dependencies
         run: |
